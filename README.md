@@ -1,47 +1,43 @@
-📋 Aplikasi To-Do List
-Aplikasi To-Do List sederhana yang dibangun dengan FastAPI (backend) dan Streamlit (frontend). Aplikasi ini memungkinkan pengguna untuk melihat, menambah, mengubah, dan menghapus tugas.
+📝 To-Do List Application
+Aplikasi ini adalah sistem manajemen tugas sederhana yang dibangun menggunakan FastAPI sebagai backend dan Streamlit sebagai frontend. Data disimpan secara lokal dalam file data.json.
 
-🛠️ Teknologi yang Digunakan
-Backend: FastAPI
+📌 Deskripsi Proyek
+Aplikasi ini memungkinkan pengguna untuk:
 
-Frontend: Streamlit
+Melihat semua tugas yang tersimpan
 
-Penyimpanan Data: JSON (data.json)
+Menambahkan tugas baru
 
-📂 Struktur Proyek
+Memperbarui detail tugas yang ada
+
+Menghapus tugas
+
+Semua fungsi tersebut dapat diakses melalui antarmuka pengguna berbasis web (Streamlit), yang berkomunikasi dengan backend FastAPI melalui HTTP API.
+
+🗂️ Struktur Folder & File
+
 .
-├── app.py          # Aplikasi Streamlit (frontend)
-├── main.py         # Aplikasi FastAPI (backend)
-├── data.json       # Database penyimpanan tugas
-└── README.md       # Dokumentasi proyek
+├── app.py        # Frontend: Antarmuka pengguna dengan Streamlit
+├── main.py       # Backend: REST API menggunakan FastAPI
+├── data.json     # Penyimpanan data dalam format JSON
+└── README.md     # Dokumentasi proyek
 
-🚀 Cara Menjalankan Aplikasi
-Pastikan Python terinstall (versi 3.7 atau lebih baru)
+⚙️ Instalasi dan Menjalankan Aplikasi
+1. Clone repositori (jika belum)
+  git clone <URL-repo-anda>
+  cd nama-folder-proyek
 
-Install dependencies:
-pip install fastapi uvicorn streamlit requests
+2. Buat dan aktifkan virtual environment (opsional tapi disarankan)
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
 
-Jalankan backend (FastAPI):
+3.  Install semua dependensi
+   pip install fastapi uvicorn streamlit requests pydantic
+
+4.  Jalankan backend FastAPI
 uvicorn main:app --reload
-Backend akan berjalan di http://localhost:8000
 
-Jalankan frontend (Streamlit) di terminal terpisah:
+5. Jalankan frontend Streamlit
+Buka terminal baru (jangan tutup yang menjalankan FastAPI), lalu jalankan:
 streamlit run app.py
-Frontend akan terbuka di browser pada http://localhost:8501
-
-🎯 Fitur Aplikasi
-a. Lihat Tugas:
-
-Menampilkan daftar semua tugas yang tersimpan
-
-b. Tambah Tugas:
-
-Menambahkan tugas baru dengan ID, judul, dan deskripsi
-
-c. Ubah Tugas:
-
-Memperbarui judul dan deskripsi tugas berdasarkan ID
-
-d. Hapus Tugas:
-
-Menghapus tugas berdasarkan ID
