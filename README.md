@@ -1,22 +1,47 @@
-# UAS-PYTHON
-Berikut adalah bentuk tugas Ujian Akhir Semester
+📋 Aplikasi To-Do List
+Aplikasi To-Do List sederhana yang dibangun dengan FastAPI (backend) dan Streamlit (frontend). Aplikasi ini memungkinkan pengguna untuk melihat, menambah, mengubah, dan menghapus tugas.
 
-# Buku Kontak API 
+🛠️ Teknologi yang Digunakan
+Backend: FastAPI
 
-Aplikasi manajemen kontak dengan REST API menggunakan Flask (server) dan Python requests (client)
+Frontend: Streamlit
 
-# Fitur
-- Tambah kontak
-- Lihat daftar kontak
-- Hapus kontak
-- Update kontak
+Penyimpanan Data: JSON (data.json)
 
-## Instalasi
-1. Clone repositori ini
-2. Install dependencies: `pip install -r requirements.txt`
-3. Jalankan server: `python server/server.py`
-4. Jalankan client: `python client/client.py`
+📂 Struktur Proyek
+.
+├── app.py          # Aplikasi Streamlit (frontend)
+├── main.py         # Aplikasi FastAPI (backend)
+├── data.json       # Database penyimpanan tugas
+└── README.md       # Dokumentasi proyek
 
-## Struktur Kode
-- `server/` - Kode untuk API server
-- `client/` - Kode untuk API client
+🚀 Cara Menjalankan Aplikasi
+Pastikan Python terinstall (versi 3.7 atau lebih baru)
+
+Install dependencies:
+pip install fastapi uvicorn streamlit requests
+
+Jalankan backend (FastAPI):
+uvicorn main:app --reload
+Backend akan berjalan di http://localhost:8000
+
+Jalankan frontend (Streamlit) di terminal terpisah:
+streamlit run app.py
+Frontend akan terbuka di browser pada http://localhost:8501
+
+🎯 Fitur Aplikasi
+a. Lihat Tugas:
+
+Menampilkan daftar semua tugas yang tersimpan
+
+b. Tambah Tugas:
+
+Menambahkan tugas baru dengan ID, judul, dan deskripsi
+
+c. Ubah Tugas:
+
+Memperbarui judul dan deskripsi tugas berdasarkan ID
+
+d. Hapus Tugas:
+
+Menghapus tugas berdasarkan ID
